@@ -8,13 +8,18 @@ class School
     @roster = {}
   end
 
+  def roster
+    @roster
+  end
 
 
-def add_student
 
-  @roster["students_name"] = []
-  @roster["students_name"] << ["grade_level"]
-
+def add_student(name,grade)
+  if @roster[grade] != nil
+     @roster[grade] << name
+   else
+     @roster[grade] = [name]
+   end
 end
 
 
